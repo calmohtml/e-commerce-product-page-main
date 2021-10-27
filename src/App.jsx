@@ -1,20 +1,26 @@
-import React, { useState, Fragment } from "react";
+import React, { Fragment } from "react";
+import GlobalStyle from "./style/GlobalStyles";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Carousel from "./components/Carousel";
+import Description from "./components/Description";
+import Counter from "./components/Counter";
+import AddToCartButton from "./components/AddToCartButton";
 
 const App = () => {
-  const [count, setCount] = useState(0);
-
   return (
     <Fragment>
+      <GlobalStyle />
       <header>
-        <h1>Hello Vite + React!</h1>
-        <button type="button" onClick={() => setCount((count) => count + 1)}>
-          count is: {count}
-        </button>
-        <p>Edit App.jsx and save to test HMR updates.</p>
-        <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
+        <Navbar />
       </header>
+      <main>
+        <Carousel />
+        <Description />
+        <Counter />
+        <AddToCartButton />
+      </main>
+      {/*<Footer />*/}
     </Fragment>
   );
 };
