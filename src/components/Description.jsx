@@ -13,6 +13,10 @@ const Description = () => {
   const Title = styled.h2`
     color: var(--veryDarkBlue);
     margin: 0 1rem 1rem 0rem;
+
+    @media (min-width: 769px) {
+      font-size: 2.725rem;
+    }
   `;
 
   const Text = styled.p`
@@ -20,7 +24,12 @@ const Description = () => {
     margin: 0 1rem 1rem 0;
     line-height: 1.5rem;
     font-size: 0.9rem;
-    font-weight: 700;
+    font-weight: 500;
+
+    @media (min-width: 769px) {
+      font-size: 1.095rem;
+      line-height: 2rem;
+    }
   `;
 
   const Discount = styled.span`
@@ -47,11 +56,20 @@ const Description = () => {
     margin: 0 auto;
     align-content: center;
     align-items: center;
+
+    @media (min-width: 769px) {
+      display: block;
+    }
   `;
 
   const Price = styled.h2`
     color: var(--veryDarkBlue);
     margin-right: 0.85rem;
+
+    @media (min-width: 769px) {
+      display: flex;
+      justify-content: flex-start;
+    }
   `;
 
   const InfoPrice = styled.div`

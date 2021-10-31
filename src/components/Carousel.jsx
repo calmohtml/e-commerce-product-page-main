@@ -11,6 +11,10 @@ const Carousel = () => {
     margin: 0 auto;
 
     img {
+      @media (min-width: 768px) {
+        border-radius: 5%;
+      }
+
       object-fit: cover;
       width: 100%;
     }
