@@ -41,10 +41,6 @@ const Navbar = () => {
   }, []);
 
   const NavContainer = styled.nav`
-    @media (min-width: 767px) {
-      border: 1px solid red;
-    }
-
     display: flex;
     padding: 1rem 0;
     justify-content: space-between;
@@ -109,6 +105,7 @@ const Navbar = () => {
   const NavMediumSize = styled.ul`
     display: flex;
     list-style: none;
+    margin: 0 1.5rem;
 
     li {
       margin: 0rem 1rem;

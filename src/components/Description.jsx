@@ -48,6 +48,10 @@ const Description = () => {
   const PreviousCost = styled.h4`
     color: var(--darkGrayishBlue);
     text-decoration: line-through;
+
+    @media (min-width: 769px) {
+      margin: 0.5rem 0;
+    }
   `;
 
   const Info = styled.div`
