@@ -12,6 +12,10 @@ const Counter = () => {
     border-radius: 1rem;
     background-color: var(--lightGrayishBlue);
     padding: 0.475rem 0;
+
+    @media (min-width: 769px) {
+      padding: 0.5rem 6rem;
+    }
   `;
 
   const CounterButton = styled.button`
