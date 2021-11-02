@@ -22,7 +22,7 @@ Tengo que lograr hacer un navbar, que:
 
 const Navbar = () => {
   const [openHamburger, setOpenHamburger] = useState(false);
-
+  const [showCart, setShowCart] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
   const breakpoint = 768;
 
@@ -125,16 +125,30 @@ const Navbar = () => {
     @media (min-width: 767px) {
       padding: 2rem 0 4rem 0;
     }
+
     display: flex;
     span {
+      cursor: pointer;
+
       :last-child {
         padding-left: 1rem;
+
+        img {
+          :hover {
+            border: 0.1rem solid var(--orange);
+            border-radius: 50%;
+          }
+        }
       }
 
       img {
         width: 1.6rem;
       }
     }
+  `;
+
+  const ItemsOnTheCart = styled.div`
+    border: 1px solid red;
   `;
 
   return (
@@ -189,8 +203,14 @@ const Navbar = () => {
         </NavMediumSize>
       </Nav>
       <NavAvatarCart>
-        <span>
+        <span onClick={() => setShowCart(!showCart)}>
           <img src={Cart} alt="Image of the cart" />
+          {showCart ? (
+            <ItemsOnTheCart>
+              <h3>Cart</h3>
+              <p>Your cart is empty</p>
+            </ItemsOnTheCart>
+          ) : null}
         </span>
         <span>
           <img src={Avatar} alt="Image of the avatar" />
