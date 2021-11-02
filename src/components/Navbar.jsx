@@ -123,7 +123,8 @@ const Navbar = () => {
 
   const NavAvatarCart = styled.div`
     @media (min-width: 767px) {
-      padding: 2rem 0 4rem 0;
+      padding: 2rem 0 0 0;
+      border: 1px solid red;
     }
 
     display: flex;
@@ -148,6 +149,27 @@ const Navbar = () => {
   `;
 
   const ItemsOnTheCart = styled.div`
+    @media (max-width: 769px) {
+      position: absolute;
+      background: white;
+      right: 19px;
+      width: 90%;
+      border-radius: 0.75rem;
+      padding: 1rem;
+      box-shadow: 10px 10px 32px 5px rgba(0, 0, 0, 0.75);
+
+      h3 {
+        margin: 1rem auto;
+      }
+
+      p {
+        margin: 5rem auto;
+        font-weight: 700;
+        text-align: center;
+        color: var(--darkGrayishBlue);
+      }
+    }
+
     border: 1px solid red;
   `;
 
@@ -208,7 +230,7 @@ const Navbar = () => {
           {showCart ? (
             <ItemsOnTheCart>
               <h3>Cart</h3>
-              <p>Your cart is empty</p>
+              <p>Your cart is empty.</p>
             </ItemsOnTheCart>
           ) : null}
         </span>
