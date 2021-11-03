@@ -124,7 +124,6 @@ const Navbar = () => {
   const NavAvatarCart = styled.div`
     @media (min-width: 767px) {
       padding: 2rem 0 0 0;
-      border: 1px solid red;
     }
 
     display: flex;
@@ -170,7 +169,16 @@ const Navbar = () => {
       }
     }
 
-    border: 1px solid red;
+    position: absolute;
+    background: white;
+    right: 50px;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    box-shadow: 10px 10px 32px 5px rgba(0, 0, 0, 0.5);
+
+    p {
+      padding: 7rem;
+    }
   `;
 
   return (
