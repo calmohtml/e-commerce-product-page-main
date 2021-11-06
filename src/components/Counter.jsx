@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { CountContext } from "../context/CountContext";
 
 const Counter = () => {
-  const [count, setCount] = useState(0);
+  const { counter, increment, decrement } = useContext(CountContext);
 
   const CounterContainer = styled.section`
     display: flex;
@@ -35,9 +36,9 @@ const Counter = () => {
 
   return (
     <CounterContainer>
-      <CounterButton onClick={() => setCount(count - 1)}>-</CounterButton>
-      <h2>{count}</h2>
-      <CounterButton onClick={() => setCount(count + 1)}>+</CounterButton>
+      <CounterButton onClick={decrement}>-</CounterButton>
+      <h2>{counter}</h2>
+      <CounterButton onClick={() => increment()}>+</CounterButton>
     </CounterContainer>
   );
 };

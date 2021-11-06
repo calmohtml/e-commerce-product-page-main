@@ -5,6 +5,7 @@ import Menu from "../images/icon-menu.svg";
 import Logo from "../images/logo.svg";
 import Close from "../images/icon-close.svg";
 import styled from "styled-components";
+import ShoppingCart from "./ShoppingCart";
 
 /* 
 Tengo que lograr hacer un navbar, que:
@@ -147,40 +148,6 @@ const Navbar = () => {
     }
   `;
 
-  const ItemsOnTheCart = styled.div`
-    @media (max-width: 769px) {
-      position: absolute;
-      background: white;
-      right: 19px;
-      width: 90%;
-      border-radius: 0.75rem;
-      padding: 1rem;
-      box-shadow: 10px 10px 32px 5px rgba(0, 0, 0, 0.75);
-
-      h3 {
-        margin: 1rem auto;
-      }
-
-      p {
-        margin: 5rem auto;
-        font-weight: 700;
-        text-align: center;
-        color: var(--darkGrayishBlue);
-      }
-    }
-
-    position: absolute;
-    background: white;
-    right: 50px;
-    border-radius: 0.75rem;
-    padding: 1rem;
-    box-shadow: 10px 10px 32px 5px rgba(0, 0, 0, 0.5);
-
-    p {
-      padding: 7rem;
-    }
-  `;
-
   return (
     <NavContainer>
       <Nav>
@@ -235,12 +202,7 @@ const Navbar = () => {
       <NavAvatarCart>
         <span onClick={() => setShowCart(!showCart)}>
           <img src={Cart} alt="Image of the cart" />
-          {showCart ? (
-            <ItemsOnTheCart>
-              <h3>Cart</h3>
-              <p>Your cart is empty.</p>
-            </ItemsOnTheCart>
-          ) : null}
+          {showCart ? <ShoppingCart /> : null}
         </span>
         <span>
           <img src={Avatar} alt="Image of the avatar" />
