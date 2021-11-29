@@ -15,7 +15,7 @@ const Counter = () => {
     padding: 0.475rem 0;
 
     @media (min-width: 769px) {
-      padding: 0.5rem 6rem;
+      padding: 0.5rem 1.5rem;
     }
   `;
 

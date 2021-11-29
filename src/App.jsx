@@ -28,7 +28,6 @@ const App = () => {
 
   const CounterAddToCartButton = styled.div`
     @media (min-width: 768px) {
-      border: 1px solid red;
       display: grid;
       justify-content: center;
       align-items: center;

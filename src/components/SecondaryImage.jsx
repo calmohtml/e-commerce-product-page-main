@@ -6,12 +6,18 @@ const SecondaryImage = ({ src, alt }) => {
     margin: 1.5rem 0;
 
     img {
-      width: 6rem;
+      width: 3.5rem;
       border-radius: 12.5%;
 
       :hover {
         border: 0.2rem solid var(--orange);
         opacity: 0.8;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      img {
+        width: 5rem;
       }
     }
   `;
