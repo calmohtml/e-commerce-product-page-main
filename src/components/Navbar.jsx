@@ -77,7 +77,7 @@ const Navbar = () => {
   const NavSmallSize = styled.ul`
     position: fixed;
     top: 0;
-    right: 4.688rem;
+    //right: 4.688rem;
     width: 18.75rem;
     height: 100%;
     background-color: var(--white);
@@ -87,7 +87,7 @@ const Navbar = () => {
     z-index: 2;
 
     li {
-      margin: 2rem 1rem;
+      margin: 2rem 0rem;
 
       a {
         text-decoration: none;
@@ -98,7 +98,7 @@ const Navbar = () => {
   `;
 
   const CloseHamburgerMenuButton = styled.button`
-    margin: 1.3rem 1.2rem;
+    margin: 1.3rem 0.05rem;
     background-color: transparent;
     border: none;
   `;
